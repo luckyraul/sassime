@@ -1,0 +1,25 @@
+{
+  "name": "sassime",
+  "version": "1.0.0",
+  "description": "Small SCSS Framework",
+  "main": "_sassime.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckyraul/sassime.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Nikita Tarasov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luckyraul/sassime/issues"
+  },
+  "homepage": "https://github.com/luckyraul/sassime#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}

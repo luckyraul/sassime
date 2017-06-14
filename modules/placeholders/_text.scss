@@ -1,0 +1,27 @@
+@each $value in $text {
+  %txt-#{$value} {
+    text-align: $value;
+  }
+
+  @each $mode, $width in $breakpoints {
+    %txt-#{$value}_#{$mode} {
+      @include screen($mode) {
+        text-align: $value;
+      }
+    }
+  }
+}
+
+@each $value in $text-decor {
+  %decor-#{$value} {
+    text-decoration: $value;
+  }
+
+  @each $mode, $width in $breakpoints {
+    %decor-#{$value}_#{$mode} {
+      @include screen($mode) {
+        text-decoration: $value;
+      }
+    }
+  }
+}

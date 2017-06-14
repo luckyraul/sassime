@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin screen($breakpoint, $type: min, $pixels: 0) {
+  $addon: 0;
+
+  @if $type == 'max' and $breakpoint != 'custom' {
+    $addon: -1px;
+  }
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and ($type + -width: #{map-get($breakpoints, $breakpoint)} +$addon) {
+      @content;
+    }
+  } @else {
+    @media screen and ($type + -width: $pixels + px) {
+      @content;
+    }
+  }
+}
