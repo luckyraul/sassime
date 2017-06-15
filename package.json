@@ -1,6 +1,6 @@
 {
   "name": "sassime",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Small SCSS Framework",
   "main": "index.js",
   "repository": {
@@ -12,7 +12,8 @@
   ],
   "files": [
     "_sassime.scss",
-    "index.js"
+    "index.js",
+    "modules"
   ],
   "author": "Nikita Tarasov",
   "license": "ISC",
