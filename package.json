@@ -1,14 +1,18 @@
 {
   "name": "sassime",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Small SCSS Framework",
-  "main": "_sassime.scss",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luckyraul/sassime.git"
   },
   "keywords": [
     "sass"
+  ],
+  "files": [
+    "_sassime.scss",
+    "index.js"
   ],
   "author": "Nikita Tarasov",
   "license": "ISC",
