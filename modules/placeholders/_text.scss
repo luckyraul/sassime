@@ -25,3 +25,17 @@
     }
   }
 }
+
+@each $key, $value in $text-transform {
+  %#{$key} {
+    text-transform: $value;
+  }
+
+  @each $mode, $width in $breakpoints {
+    %#{$key}_#{$mode} {
+      @include screen($mode) {
+        text-transform: $value;
+      }
+    }
+  }
+}

@@ -27,8 +27,17 @@ $colors: (
   empty: transparent,
 ) !default;
 
+$colour-classes: true !default;
+$text-classes: true !default;
+$visual-classes: true !default;
 
 $float: left, right !default;
 $text: left, right, center, justify !default;
 $position: fixed, absolute, relative, static !default;
 $text-decor: underline, none !default;
+
+$text-transform: (
+  capital: capitalize,
+  upper: uppercase,
+  lower: lowercase,
+) !default;
