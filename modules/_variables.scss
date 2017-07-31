@@ -36,6 +36,8 @@ $text: left, right, center, justify !default;
 $position: fixed, absolute, relative, static !default;
 $text-decor: underline, none !default;
 
+$visibility: hidden, visible, collapse !default;
+
 $text-transform: (
   capital: capitalize,
   upper: uppercase,

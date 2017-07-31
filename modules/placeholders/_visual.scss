@@ -39,3 +39,17 @@
     }
   }
 }
+
+@each $value in $visibility {
+  %vis-#{$value} {
+    visibility: $value;
+  }
+
+  @each $mode, $width in $breakpoints {
+    %vis-#{$value}_#{$mode} {
+      @include screen($mode) {
+        visibility: $value;
+      }
+    }
+  }
+}
