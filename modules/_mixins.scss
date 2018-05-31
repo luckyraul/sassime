@@ -10,7 +10,7 @@
   }
 
   @if map-has-key($breakpoints, $breakpoint) {
-    @media screen and ($type + -width: #{map-get($breakpoints, $breakpoint)} +$addon) {
+    @media screen and ($type + -width: #{map-get($breakpoints, $breakpoint) + $addon}) {
       @content;
     }
   } @else {
