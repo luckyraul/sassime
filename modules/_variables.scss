@@ -27,6 +27,20 @@ $colors: (
   empty: transparent,
 ) !default;
 
+$fonts: (
+  main: 'Arial',
+  header: 'Georgia'
+) !default;
+
+$fontsize: (
+  12: 0.75rem,
+  16: 1 rem,
+  20: 1.25 rem,
+  24: 1.5 rem,
+  28: 1.75 rem,
+  36: 2 rem,
+) !default;
+
 $colour-classes: true !default;
 $text-classes: true !default;
 $visual-classes: true !default;
@@ -34,7 +48,7 @@ $visual-classes: true !default;
 $float: left, right !default;
 $text: left, right, center, justify !default;
 $position: fixed, absolute, relative, static !default;
-$text-decor: underline, none !default;
+$text-decor: underline, none, line-through !default;
 
 $visibility: hidden, visible, collapse !default;
 

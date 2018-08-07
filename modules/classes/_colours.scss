@@ -27,6 +27,7 @@
     .border-b-#{$key} {
       border-bottom: 1px solid $value;
     }
+
     @each $mode, $width in $breakpoints {
       .color-#{$key}_#{$mode} {
         @include screen($mode) {

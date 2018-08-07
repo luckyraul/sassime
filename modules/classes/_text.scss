@@ -1,42 +1,63 @@
 @if $text-classes {
-
-   @each $value in $text {
+  @each $value in $fontsize {
+    .fs-#{$value} {
+      font-family: $value;
+    }
+  }
+  @each $value in $fonts {
+    .ff-#{$value} {
+      font-family: $value;
+    }
+  }
+  @each $value in $text {
     .txt-#{$value} {
       text-align: $value;
     }
+  }
+  @each $value in $text-decor {
+    .decor-#{$value} {
+      text-decoration: $value;
+    }
+  }
+  @each $key, $value in $text-transform {
+    .txt-trans-#{$key} {
+      text-transform: $value;
+    }
+  }
 
-    @each $mode, $width in $breakpoints {
+  @each $mode, $width in $breakpoints {
+    @each $key, $value in $display {
       .txt-#{$value}_#{$mode} {
         @include screen($mode) {
           text-align: $value;
         }
       }
     }
-  }
-
-  @each $value in $text-decor {
-    .decor-#{$value} {
-      text-decoration: $value;
-    }
-
-    @each $mode, $width in $breakpoints {
+    @each $value in $text-decor {
       .decor-#{$value}_#{$mode} {
         @include screen($mode) {
           text-decoration: $value;
         }
       }
     }
-  }
-
-  @each $key, $value in $text-transform {
-    .txt-trans-#{$key} {
-      text-transform: $value;
-    }
-
-    @each $mode, $width in $breakpoints {
+    @each $key, $value in $text-transform {
       .txt-trans-#{$key}_#{$mode} {
         @include screen($mode) {
           text-transform: $value;
+        }
+      }
+    }
+    @each $value in $fonts {
+      .ff-#{$value}_#{$mode} {
+        @include screen($mode) {
+          font-family: $value;
+        }
+      }
+    }
+    @each $value in $fontsize {
+      .fs-#{$value}_#{$mode} {
+        @include screen($mode) {
+          font-size: $value;
         }
       }
     }

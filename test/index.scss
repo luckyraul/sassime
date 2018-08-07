@@ -17,3 +17,13 @@ $text-classes: false;
 
 // 1. Variables
 @import '../sassime';
+
+.h {
+  @extend %hide;
+  @extend %block_tablet;
+}
+
+.s {
+  @extend %block;
+  @extend %hide_tablet;
+}

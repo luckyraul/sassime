@@ -3,50 +3,39 @@
     .ds-#{$key} {
       display: $value;
     }
-
-    @each $mode, $width in $breakpoints {
-      .ds-#{$key}_#{$mode} {
-        @include screen($mode) {
-          display: $value;
-        }
-      }
-    }
   }
-
   @each $value in $position {
     .pos-#{$value} {
       position: $value;
     }
-
-    @each $mode, $width in $breakpoints {
-      .pos-#{$value}_#{$mode} {
-        @include screen($mode) {
-          position: $value;
-        }
-      }
-    }
   }
-
   @each $value in $float {
     .fl-#{$value} {
       float: $value;
     }
-
-    @each $mode, $width in $breakpoints {
-      .fl-#{$value}_#{$mode} {
-        @include screen($mode) {
-          float: $value;
-        }
-      }
-    }
   }
-
   @each $value in $visibility {
     .vis-#{$value} {
       visibility: $value;
     }
-
-    @each $mode, $width in $breakpoints {
+  }
+  @each $mode, $width in $breakpoints {
+    @each $key, $value in $display {
+      .ds-#{$key}_#{$mode} {
+        display: $value;
+      }
+    }
+    @each $value in $position {
+      .pos-#{$value}_#{$mode} {
+        position: $value;
+      }
+    }
+    @each $value in $float {
+      .fl-#{$value}_#{$mode} {
+        float: $value;
+      }
+    }
+    @each $value in $visibility {
       .vis-#{$value}_#{$mode} {
         @include screen($mode) {
           visibility: $value;

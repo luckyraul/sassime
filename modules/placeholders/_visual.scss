@@ -2,54 +2,43 @@
   %#{$key} {
     display: $value;
   }
-
-  @each $mode, $width in $breakpoints {
+}
+@each $value in $position {
+  %#{$value} {
+    position: $value;
+  }
+}
+@each $value in $float {
+  %fl-#{$value} {
+    float: $value;
+  }
+}
+@each $value in $visibility {
+  %vis-#{$value} {
+    visibility: $value;
+  }
+}
+@each $mode, $width in $breakpoints {
+  @each $key, $value in $display {
     %#{$key}_#{$mode} {
       @include screen($mode) {
         display: $value;
       }
     }
   }
-}
-
-@each $value in $position {
-  %#{$value} {
-    position: $value;
-  }
-
-  @each $mode, $width in $breakpoints {
+  @each $value in $position {
     %#{$value}_#{$mode} {
-      @include screen($mode) {
-        position: $value;
-      }
+      position: $value;
     }
   }
-}
-
-@each $value in $float {
-  %fl-#{$value} {
-    float: $value;
-  }
-
-  @each $mode, $width in $breakpoints {
+  @each $value in $float {
     %fl-#{$value}_#{$mode} {
-      @include screen($mode) {
-        float: $value;
-      }
+      float: $value;
     }
   }
-}
-
-@each $value in $visibility {
-  %vis-#{$value} {
-    visibility: $value;
-  }
-
-  @each $mode, $width in $breakpoints {
+  @each $value in $visibility {
     %vis-#{$value}_#{$mode} {
-      @include screen($mode) {
-        visibility: $value;
-      }
+      visibility: $value;
     }
   }
 }
