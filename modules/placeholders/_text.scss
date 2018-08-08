@@ -28,6 +28,11 @@
   }
 }
 
+@each $key, $value in $fontsize {
+  %lh-#{$key} {
+    line-height: $value;
+  }
+}
 
 @each $mode, $width in $breakpoints {
   @each $value in $text {
@@ -62,6 +67,13 @@
     %fs-#{$key}_#{$mode} {
       @include screen($mode) {
         font-size: $value;
+      }
+    }
+  }
+  @each $key, $value in $fontsize {
+    .lh-#{$key}_#{$mode} {
+      @include screen($mode) {
+        line-height: $value;
       }
     }
   }

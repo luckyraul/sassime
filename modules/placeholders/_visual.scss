@@ -28,17 +28,23 @@
   }
   @each $value in $position {
     %#{$value}_#{$mode} {
-      position: $value;
+      @include screen($mode) {
+        position: $value;
+      }
     }
   }
   @each $value in $float {
     %fl-#{$value}_#{$mode} {
-      float: $value;
+      @include screen($mode) {
+        float: $value;
+      }
     }
   }
   @each $value in $visibility {
     %vis-#{$value}_#{$mode} {
-      visibility: $value;
+      @include screen($mode) {
+        visibility: $value;
+      }
     }
   }
 }
