@@ -16,14 +16,14 @@
   }
 }
 
-@each $value in $fonts {
-  %ff-#{$value} {
+@each $key, $value in $fonts {
+  %ff-#{$key} {
     font-family: $value;
   }
 }
 
-@each $value in $fontsize {
-  %fs-#{$value} {
+@each $key, $value in $fontsize {
+  %fs-#{$key} {
     font-size: $value;
   }
 }
@@ -51,15 +51,15 @@
       }
     }
   }
-  @each $value in $fonts {
-    %ff-#{$value}_#{$mode} {
+  @each $key, $value in $fonts {
+    %ff-#{$key}_#{$mode} {
       @include screen($mode) {
         font-family: $value;
       }
     }
   }
-  @each $value in $fontsize {
-    %fs-#{$value}_#{$mode} {
+  @each $key, $value in $fontsize {
+    %fs-#{$key}_#{$mode} {
       @include screen($mode) {
         font-size: $value;
       }

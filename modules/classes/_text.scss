@@ -1,14 +1,4 @@
 @if $text-classes {
-  @each $value in $fontsize {
-    .fs-#{$value} {
-      font-family: $value;
-    }
-  }
-  @each $value in $fonts {
-    .ff-#{$value} {
-      font-family: $value;
-    }
-  }
   @each $value in $text {
     .txt-#{$value} {
       text-align: $value;
@@ -17,6 +7,16 @@
   @each $value in $text-decor {
     .decor-#{$value} {
       text-decoration: $value;
+    }
+  }
+  @each $key, $value in $fontsize {
+    .fs-#{$key} {
+      font-family: $value;
+    }
+  }
+  @each $key, $value in $fonts {
+    .ff-#{$key} {
+      font-family: $value;
     }
   }
   @each $key, $value in $text-transform {
@@ -40,24 +40,24 @@
         }
       }
     }
-    @each $key, $value in $text-transform {
-      .txt-trans-#{$key}_#{$mode} {
-        @include screen($mode) {
-          text-transform: $value;
-        }
-      }
-    }
-    @each $value in $fonts {
-      .ff-#{$value}_#{$mode} {
+    @each $key, $value in $fonts {
+      .ff-#{$key}_#{$mode} {
         @include screen($mode) {
           font-family: $value;
         }
       }
     }
-    @each $value in $fontsize {
-      .fs-#{$value}_#{$mode} {
+    @each $key, $value in $fontsize {
+      .fs-#{$key}_#{$mode} {
         @include screen($mode) {
           font-size: $value;
+        }
+      }
+    }
+    @each $key, $value in $text-transform {
+      .txt-trans-#{$key}_#{$mode} {
+        @include screen($mode) {
+          text-transform: $value;
         }
       }
     }
