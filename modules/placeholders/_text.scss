@@ -30,7 +30,7 @@
 
 
 @each $mode, $width in $breakpoints {
-  @each $key, $value in $display {
+  @each $value in $text {
     %txt-#{$value}_#{$mode} {
       @include screen($mode) {
         text-align: $value;
