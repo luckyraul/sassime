@@ -45,10 +45,19 @@ Tiny Sass Framework
 #### font-size ```%fs-$var``` in $fontsize
 ```scss
 @extend %fs-12;
-//font-size: 0.75rem
+//font-size: 0.75rem;
 
 @extend %fs-16_tablet;
 //@media screen and (min-width: 768px) { font-size: 1rem; }
+```
+
+#### line-height ```%lh-$var``` in $fontsize
+```scss
+@extend %lh-12;
+//line-height: 0.75rem;
+
+@extend %lh-16_tablet;
+//@media screen and (min-width: 768px) { line-height: 1rem; }
 ```
 
 ### Visuals
