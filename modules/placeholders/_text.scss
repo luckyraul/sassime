@@ -71,7 +71,7 @@
     }
   }
   @each $key, $value in $fontsize {
-    .lh-#{$key}_#{$mode} {
+    %lh-#{$key}_#{$mode} {
       @include screen($mode) {
         line-height: $value;
       }
