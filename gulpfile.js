@@ -1,13 +1,13 @@
 'use strict';
 
-var gulp    = require('gulp');
-var sass    = require('gulp-sass');
-var cssnano = require('gulp-cssnano');
-var rename  = require('gulp-rename');
+const gulp    = require('gulp');
+const cssnano = require('gulp-cssnano');
+const rename  = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('test', function () {
   return gulp.src('./test/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./test'))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))

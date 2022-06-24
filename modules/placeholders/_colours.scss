@@ -1,70 +1,70 @@
 @each $key, $value in $colors {
-  %color-#{$key} {
+  %#{"color-" + $key} {
     color: $value;
   }
 
-  %bg-#{$key} {
+  %#{"bg-" + $key} {
     background-color: $value;
   }
 
-  %border-#{$key} {
+  %#{"border-" + $key} {
     border: 1px solid $value;
   }
 
-  %border-t-#{$key} {
+  %#{"border-t-" + $key} {
     border-top: 1px solid $value;
   }
 
-  %border-l-#{$key} {
+  %#{"border-l-" + $key} {
     border-left: 1px solid $value;
   }
 
-  %border-r-#{$key} {
+  %#{"border-r-" + $key} {
     border-right: 1px solid $value;
   }
 
-  %border-b-#{$key} {
+  %#{"border-b-" + $key} {
     border-bottom: 1px solid $value;
   }
 
   @each $mode, $width in $breakpoints {
-    %color-#{$key}_#{$mode} {
+    %#{"color-" + $key + "_" + $mode} {
       @include screen($mode) {
         color: $value;
       }
     }
 
-    %bg-#{$key}_#{$mode} {
+    %#{"bg-" + $key + "_" + $mode} {
       @include screen($mode) {
         background-color: $value;
       }
     }
 
-    %border-#{$key}_#{$mode} {
+    %#{"border-" + $key + "_" + $mode} {
       @include screen($mode) {
         border: 1px solid $value;
       }
     }
 
-    %border-t-#{$key}_#{$mode} {
+    %#{"border-t-" + $key + "_" + $mode} {
       @include screen($mode) {
         border-top: 1px solid $value;
       }
     }
 
-    %border-l-#{$key}_#{$mode} {
+    %#{"border-l-" + $key + "_" + $mode} {
       @include screen($mode) {
         border-left: 1px solid $value;
       }
     }
 
-    %border-r-#{$key}_#{$mode} {
+    %#{"border-r-" + $key + "_" + $mode} {
       @include screen($mode) {
         border-right: 1px solid $value;
       }
     }
 
-    %border-b-#{$key}_#{$mode} {
+    %#{"border-b-" + $key + "_" + $mode} {
       @include screen($mode) {
         border-bottom: 1px solid $value;
       }
