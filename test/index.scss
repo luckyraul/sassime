@@ -8,8 +8,8 @@ $breakpoints: (
 );
 
 $colors: (
-  black: #000,
-  white: #fff,
+  blue: #00f,
+  red: #f00,
   empty: transparent,
 );
 
@@ -20,10 +20,14 @@ $text-classes: true;
 
 .h {
   @extend %hide;
+  @extend %color-red;
+  @extend %color-blue_tablet;
   @extend %block_tablet;
 }
 
 .s {
+  @extend %color-blue;
+  @extend %color-red_tablet;
   @extend %block;
   @extend %hide_tablet;
 }
